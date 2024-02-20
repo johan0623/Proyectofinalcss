@@ -4,6 +4,12 @@
 } */
 
 
+*{
+    margin: 0;
+    padding: 0;
+    /* max-width: 1200px; */
+}
+
 
 header {
     margin: 0px;
@@ -11,23 +17,221 @@ header {
     background-color: rgba(255, 255, 255, 0.868);
     /* padding: 20px; */
     display: flex;
-    position: relative;
+
 }
 
 
-.header2 {
+/* clases probando profe */
+.algo{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+.algo h1 {
+    text-align: center;
+}
+.algo img{
+    width: 100%;
+    object-fit: contain;
+}
+.algo .contendorimg{
+    width: 100%;
+    height:calc(100% - 36px);
+
+}
+
+/* fin clases provando profe */
+
+/* .header2 {
     display: flex;
     margin-left: auto;
+    margin-top: auto;
+    margin-bottom: 20px;
 
 
 
-}
+} */
 
-.buscador {
+.buscador input{
+    margin-top: 90px;
+    border: #000000 1px solid;
+    height: 30px;
+    width: calc(300px - 10px);
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+    /* margin-left: 0px; */
+    margin-right: 0px;
+    border-right: none;
+    margin-bottom: 50px;
 
     /* height: 70px;
     width: 200px; */
-    width: 100%;
+    /* width: 100%; */
+
+}
+
+.buscar input::placeholder {
+    color: rgba(139, 139, 139, 0.868);
+}
+
+.buscar{
+    display: flex;
+    flex-direction: row;
+
+
+
+}
+
+
+
+.algo, buscar{
+    padding-left: 0px;
+    padding-right: 0px;
+
+
+
+}
+
+
+
+.boton-carrito {
+    height: 32px;
+    margin-right: 5px;
+}
+
+.boton-carrito:hover {
+    scale: 1.1;
+
+
+
+}
+
+
+.user {
+    width: 30px;
+    height: 25px;
+
+
+
+}
+
+
+.derecha{
+    display: flex;
+    /* flex: row; */
+    position: relative;
+    justify-content: flex-end;
+    /* margin: 5px; */
+}
+
+
+
+
+.user {
+    margin: 5px;
+
+} 
+
+.inicio-sesion {
+    margin: 5px;
+    /* padding: 10px; */
+
+
+
+
+}
+
+
+
+.register button {
+    background-color: rgb(0, 0, 0);
+    border-radius: 7px;
+    padding: 5px;
+    border: transparent;
+    width: 88px;
+    font-size: 12px;
+    color: white;
+}
+
+.register button:hover {
+background-color: rgb(27, 127, 214);
+box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
+    scale: 1.1;
+
+
+
+}
+
+.inicio-sesion button {
+    background-color: rgb(0, 0, 0);
+    border-radius: 7px;
+    padding: 5px;
+    border: transparent;
+    width: 88px;
+    font-size: 12px;
+    color: white;
+}
+
+.inicio-sesion button:hover {
+    background-color: rgb(27, 127, 214);
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2);
+    scale: 1.1;
+
+
+
+
+}
+
+
+
+
+.register {
+    margin: 5px;
+
+
+
+}
+/* .lupa {
+    height: 30px;
+
+
+
+
+
+} */
+
+/* input[type="submit"] {
+
+    color: rgb(0, 0, 0);
+    border: none;
+    height: 30px;
+    cursor: pointer;
+
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(11, 104, 235, 0.868);
+} */
+
+.lupa2 {
+    position: relative;
+    width: 25px;
+    /* height: 29px; */
+    /* cursor: zoom-in; */
+    margin: 0;
+    margin-top: 90px;
+    margin-left: 2px;
+
+    /* border: black 1px solid; */
+  }
+
+
+.lupa2 img {
+    border: #000000 1px solid;
+    margin: 0px;
+    border-left: none;
+    height: 28.5px;
+    position: absolute;
 
 }
 
@@ -37,11 +241,11 @@ header {
 
 } */
 
-.logo {
+/* .logo {
     text-align: start;
     margin: 0px;
-    /* top: 10px; */
-    /* position: relative; */
+    top: 10px;
+    position: relative;
     width: 60vh;
     height: 100%px;
     margin-left: 30px;
@@ -50,9 +254,9 @@ header {
 
 
 
-}
+} */
 
-.logo img {
+/* .logo img {
     width: 100px;
     height: 100px;
     margin: 0px;
@@ -62,40 +266,21 @@ header {
 
 
 
-}
+} */
 
-.logo h1 {
+/* .logo h1 {
     margin-top: 0px;
     margin-bottom: 0px;
 
 
 
-}
+} */
 
 .carrito-button {
     width: 50px;
     height: 70px;
     position: fixed;
     right: 19px;
-
-
-
-}
-
-
-
-
-
-
-
-footer {
-    background-color: rgba(11, 104, 235, 0.868);
-    height: 20px;
-    text-align: center;
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-
 
 
 
@@ -112,11 +297,7 @@ footer {
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
-    /* background-image:url(sources/fondonegro.jpg) ; */
-
-
-
-
+    flex-direction: row;
 }
 
 body {
@@ -128,9 +309,6 @@ body {
 }
 
 .productos {
-
-
-    
     position: relative;
     margin: 3px;
     /* border: rgb(0, 0, 0) 2px solid; */
@@ -138,8 +316,8 @@ body {
     background-color: #ffffff;
     text-align: center;
     width: 250px;
-    height: 460px;
-    padding: 5px;
+    height: 440px;
+    /* padding: 5px; */
     margin-top: 20px;
     color: rgb(0, 0, 0);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
@@ -152,21 +330,23 @@ body {
 
 }
 
-ul li :hover {
-    background-color: rgb(255, 13, 13);
-    scale: 1.5;
-    color: black;
 
 
-
+.producto img {
+    width: 250px;
+    height: 250px;
 }
-
-
 
 
 .producto {
     width: 100%;
     height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* flex-direction: column; */
 
 
 
@@ -183,18 +363,24 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px;
+    /* border-radius: 15px; */
 
 
 
 }
 
+
+
 nav ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 0px;
     /* margin-bottom: 20px; */
     list-style: none;
+    padding: 0px;
+    align-content: center;
+    /* align-items: center; */
+
 
 
 
@@ -202,18 +388,25 @@ nav ul {
 
 }
 nav {
-    background-color: rgb(255, 255, 255);
-    margin-top: 5px;
-    gap: -20px;
+    background-color: black;
+    /* margin-top: 5px; */
+    /* position: fixed; */
+    height: 20px;
 
+    position: sticky;
+    width: 100%;
+    top: -1px;
+    z-index: 20;
+    align-content: center;
 
 
 }
 
-ul li {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    gap: -20px;
+nav ul li {
+    /* background-color: rgb(0, 0, 0); */
+    color: rgb(187, 185, 185);
+    /* display: inline-block; */
+    margin-right: 30px;
     
 
 
@@ -221,10 +414,19 @@ ul li {
 }
 
 
+ul li :hover {
+    /* background-color: rgb(255, 255, 255); */
+    /* scale: 1.5; */
+    color: rgb(27, 127, 214);
+
+
+
+}
+
 ul li a {
     text-decoration: none;
     color: #ffffff;
-        gap: -20px;
+
 
 
 
@@ -239,6 +441,393 @@ a {
 
 }
 
+nav ul li:last-child {
+    margin-right: 0;
+    /* Elimina el margen derecho del último elemento */
+}
+
+
+/* Estilo del select */
+.seleccionar {
+    background-color: #ffffff;
+    /* border-radius: 4px; */
+    color: #333;
+    font-size: 12px;
+    /* padding: 8px 24px 8px 12px; */
+    width: 80px;
+    /* cursor: pointer; */
+    outline: none;
+    height: 30px;
+    margin-top: 90px;
+    border-left: none;
+    margin-right: 2px;
+    /* border-bottom-right-radius: 7px; */
+    margin-right: -2px;
+
+    border-top: 1px solid black;
+    /* Borde superior */
+    border-bottom: 1px solid black;
+    /* Borde inferior */
+    border-left: none;
+    /* Sin borde izquierdo */
+    border-right: none;
+    /* Sin borde derecho */
+    /* Otros estilos opcionales */
+}
+
+
+.seleccionar:hover {
+    background-color: rgb(27, 127, 214);
 
 
 
+
+}
+
+
+
+
+
+/* Estilo de las opciones */
+.seleccionar option {
+    background-color: rgb(27, 127, 214);
+    color: #000000;
+}
+
+/* Cambio de estilo al pasar el ratón sobre las opciones */
+.seleccionar option:hover {
+    background-color: rgb(0, 0, 0);
+        scale: 1.1;
+}
+
+/* Estilo del select cuando está enfocado */
+.seleccionar:focus {
+    border-color: rgb(27, 127, 214);
+    box-shadow: 0 0 5px rgba(33, 42, 223, 0.6);
+
+}
+
+/* Estilo de la flecha desplegable */
+.seleccionar::after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Estilo de la flecha desplegable cuando se enfoca */
+.seleccionar:focus::after {
+    color: rgb(27, 127, 214);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.producto p {
+    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 14px;
+
+}
+
+.producto figcaption {
+    color: rgb(27, 127, 214);
+    font-weight: bold;
+
+
+
+}
+
+.producto button {
+    /* background-color: black; */
+    border-radius: 10px;
+    /* border: rgb(27, 127, 214); */
+    /* margin-top: 20px; */
+
+
+
+
+}
+
+/* DE AQUI HACIA ABAJO VA EL CSS DE LOS PRODUCTOS  */
+
+.cabeza-productos {
+    background-color: #000000;
+    width: 100%;
+    height: 100px;
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+} */
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    margin-top: 50px;
+}
+
+.product-image {
+    flex: 1;
+    text-align: center;
+}
+
+.product-image img {
+    max-width: 80%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.producto-detalles {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 0px;
+    bottom: 100px;
+    
+}
+
+.producto-nombre {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.Producto-descripcion {
+    font-size: 16px;
+    line-height: 2;
+    
+}
+
+.producto-precio {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.contenerdor-img-productos {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.product-image {
+    width: 700px;
+    height: 400px;
+
+
+}
+
+.product-image img {
+    width: 400px;
+    height: 400px;
+
+
+}
+
+
+.product-image2 {
+    width: 700px;
+    height: 400px;
+    
+
+
+
+}
+
+.product-image2 img {
+    width: 400px;
+    height: 400px;
+
+
+}
+
+
+.agregar-carrito {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(27, 127, 214);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.agregar-carrito:hover {
+    background-color: #45a049;
+}
+
+/* Codigo de flecha hacia atras */
+
+.volver-atras {
+    display: inline-block;
+    padding-left: 20px;
+    /* Espacio a la izquierda de la flecha */
+    position: relative;
+    text-decoration: none;
+    background-color: #fff;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.volver-atras::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 8px 5px 0;
+    border-color: transparent #000000 transparent transparent;
+    /* Color de la flecha */
+}
+
+
+
+
+.volver-atras:hover {
+    scale: 1.1;
+    left: 30px;
+
+
+
+}
+
+
+
+
+.botones {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: calc(100% - 20px);
+    padding: 10px;
+    /* Ajusta el espacio entre los botones y el texto */
+    text-align: center;
+    justify-content: center;
+    /* Centra los botones horizontalmente */
+}
+
+.botones button {
+    margin: 5px;
+    /* Espacio entre botones */
+}
+
+
+
+
+
+/* INICIO DE FOOTER  */
+
+.footer {
+    background-color: rgb(27, 127, 214);
+    /* Azul */
+    color: #fff;
+    /* Blanco */
+    padding: 40px 0;
+}
+
+.footer h3 {
+    color: #fff;
+    /* Blanco */
+}
+
+.footer p {
+    color: #fff;
+    /* Blanco */
+}
+
+.footer a {
+    color: #fff;
+    /* Blanco */
+}
+
+.footer a:hover {
+    color: #000;
+    /* Negro */
+}
+
+.footer ul.list-inline li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer ul.list-unstyled li {
+    margin-bottom: 10px;
+}
+
+.footer hr {
+    border-top: 1px solid #fff;
+    /* Blanco */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contacto-email{
+    width: 33.33%;
+    float: left;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .contacto-email {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+    }
+}

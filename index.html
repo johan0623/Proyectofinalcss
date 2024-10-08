@@ -8,16 +8,13 @@
 </head>
 
 
-
-
-
-
-
 <body>
 
     <header>
         <div class="algo">
+            <a href="index.html">
             <h1>DigitalMart</h1>
+            </a>
             <div class="contendorimg">
                 <a href="index.html">
                 <img src="sources/carrito.png" alt="Logo de DigitalMart">
@@ -36,7 +33,7 @@
 
             <!-- <div class="seleccionar"> -->
                 <select class="seleccionar" name="" id="">
-                    <option value="1" selected disabled>Inventario</option>
+                    <option value="1">Todo</option>
                     <option value="2">Cargadores</option>
                     <option value="3">Audifonos</option>
                     <option value="4">Cover</option>
@@ -55,17 +52,55 @@
 
         <div class="algo derecha">
 
-            <div class="boton-carrito">
-                <a href="carrito.html">
-                    <img src="sources/carrito-compra.png" alt="">
 
-                </a>
+            <!-- boton carrito -->
+            <div class="boton-carrito" id="carrito">
+                <img src="sources/carrito-compra.png" alt="carrito de compras">
+                <div class="carrito-desplegable">
+                    <table id="lista-carrito">
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <a href="#" id="vaciar-carrito">Vaciar carrito</a>
+                </div>
             </div>
+
+            <!-- <div class="boton-carrito" id="carrito">
+                <ul>
+                    <li class="submenu">
+                            <img src="sources/carrito-compra.png" alt="carrito de compras">
+                            <div id="carrito"> 
+
+                                <table id="lista-carrito">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th>Cantidad</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                                <a href="#" id="vaciar-carrito">Vaciar carrito</a>
+                            </div>
+                    </li>
+                </ul>
+            </div> -->
 
 
             <div class="register">
                 <a href="">
-                    <button>Registrate ya</button>
+                    <button>Registrate</button>
                 </a>
             </div>
 
@@ -91,17 +126,27 @@
 
     </header>
 
+
+    <!-- navbar -->
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a> </li>
-                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="#contactanos">Contacto</a></li>
                 <li><a href="services.html">Servicios</a></li>
                 <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="catalogo.html">Catalogo</a></li>
             </ul>
 
 
         </nav>
 
+        <button onclick="goToTop()" id="goToTopBtn" title="Volver arriba">Volver arriba</button>
+        <div id="theme-buttons">
+
+            <button class="botonTemas" onclick="setTheme('light')">Light</button>
+            <button class="botonTemas" onclick="setTheme('dark')">Dark</button>
+            <button class="botonTemas" onclick="setTheme('pastel')">Pastel</button>
+        </div>
 
 
 
@@ -123,207 +168,189 @@
 
 
     <main class="principal">
-                
-        <div class="productos"> <!-- Producto 1 organizados horizontal -->
-            <article class="producto">
-                <a href="producto1.html">
-                <figure>
-                    <img src="sources/adaptador-ligthning.jpg" alt="Nombre del Producto">
-                    <figcaption>Adaptador (iPhone) a HDMI</figcaption>
-                </figure>
-                <p>Reproduce contenido de tu iPhone en un televisor o proyector con un cable HDMI.</p>
-                <p>Precio: RD$1,695.00</p>
-                </a>
-
-                <div class="botones">
-                    <a href="carrito.html">
-                        <button class="agregar-carrito">Añadir al Carrito</button>
+        <div id="lista-cursos" class="contenedorCursos" >
+            <div class="productos"> <!-- Producto 1 organizados horizontal -->
+                <article class="producto">
+                    <a href="producto1.html">
+                    <figure>
+                        <img src="sources/adaptador-ligthning.jpg" alt="Nombre del Producto"  class="itemImage">
+                        <figcaption class="nombreProduct">Adaptador (iPhone) a HDMI</figcaption>
+                    </figure>
+                    <p>Reproduce contenido de tu iPhone en un televisor o proyector con un cable HDMI.</p>
+                    <p class="productoPrecio">$1,695.00</p>
                     </a>
-                </div>
 
-                <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
+                    <div class="botones">
+                            <button class="agregar-carrito addTocart" data-id="1">Añadir al Carrito</button>
+                    </div>
+
+                    <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
+                </article>
+
+            </div> 
 
 
-            </article>
+            <div class="productos"> <!-- Producto 2 organizados horizontal -->
+                <article class="producto">
+                    <a href="producto2.html">
+                        <figure>
+                            <img src="sources/audifono2.webp" alt="Nombre del Producto" class="itemImage">
+                            <figcaption class="nombreProduct">Audifonos P9 Pro Max</figcaption>
+                        </figure>
+                        <p>Diadema de algodón suave mejorada, úsalo durante mucho tiempo sin molestias.</p>
+                        <p class="productoPrecio">$1,795.00</p>
+                    </a>
+                    <div class="botones">
+                            <button class="agregar-carrito addTocart" data-id="2">Añadir al Carrito</button>
+                    </div>
+                    <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
+
+                </article>
             
-        </div> 
+            </div>
 
 
-        <div class="productos"> <!-- Producto 2 organizados horizontal -->
-            <article class="producto">
-                <a href="producto2.html">
-                    <figure>
-                        <img src="sources/audifono2.webp" alt="Nombre del Producto">
-                        <figcaption>Audifonos P9 Pro Max</figcaption>
-                    </figure>
-                    <p>Diadema de algodón suave mejorada, úsalo durante mucho tiempo sin molestias.</p>
-                    <p>Precio: RD$1,795.00</p>
-                </a>
-                <div class="botones">
-                    <a href="carrito.html">
-                        <button class="agregar-carrito">Añadir al Carrito</button>
+            <div class="productos"> <!-- Producto 3 organizados horizontal -->
+                <article class="producto">
+                    <a href="producto3.html">
+                        <figure>
+                            <img src="sources/pencilIphone.jpg" alt="Nombre del Producto" class="itemImage">
+                            <figcaption class="nombreProduct">Apple Pencil (1ra generación)</figcaption>
+                        </figure>
+                        <p>Precisión y fluidez en tus trazos, ideal para dibujar y tomar notas en dispositivos iPad.</p>
+                        <p class="productoPrecio">$8,995.00</p>
                     </a>
-                </div>
-                <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
+                    <div class="botones">
+                            <button class="agregar-carrito addTocart" data-id="3">Añadir al Carrito</button>
+                    </div>
 
-            </article>
-        
+
+                    <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
+
+                </article>
+            
+            </div>
+
+
+
+            <div class="productos"> <!-- Producto 4 organizados horizontal -->
+                <article class="producto">
+                    <a href="producto4.html">
+                        <figure>
+                            <img src="sources/cargadorportatil.jpg" alt="Nombre del Producto" class="itemImage">
+                            <figcaption class="nombreProduct">Cargador Magnético Plegable 3 en 1 </figcaption>
+                        </figure>
+                        <p>Dile adiós a esos interminables cables y cargadores individuales</p>
+                        <p class="productoPrecio">$2,495.00</p>
+                    </a>
+                    <div class="botones">
+                            <button class="agregar-carrito addTocart" data-id="4">Añadir al Carrito</button>
+                    </div>
+                    <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
+
+                </article>
+            
+            </div>
+
+
+            <div class="productos"> <!-- Producto 5 organizados horizontal -->
+                <article class="producto">
+                    <a href="producto5.html">
+                        <figure>
+                            <img src="sources/forro.jpg" alt="Imagen de cover iphone 13" class="itemImage">
+                            <figcaption class="nombreProduct">Cover iPhone 13 AG GLASS</figcaption>
+                        </figure>
+                        <p>Proteja su teléfono de rayones, golpes y otros daños diarios</p>
+                        <p class="productoPrecio">$995.00</p>
+                    </a>
+                    <div class="botones">
+                            <button class="agregar-carrito addTocart" data-id="5">Añadir al Carrito</button>
+                    </div>
+                    <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
+
+                </article>
+            
+            </div>
+
+
+
+            <div class="productos"> <!-- Producto 6 organizados horizontal -->
+                <article class="producto">
+                    <a href="producto6.html">
+                        <figure>
+                            <img src="sources/cargador_cableiphone.png" alt="Nombre del Producto" class="itemImage">
+                            <figcaption class="nombreProduct">Cable Tipo-C a Lightning</figcaption>
+                        </figure>
+                        <p>Cargar y sincronizar los AirPods,cargar Iphone, un Siri Remote y mucho más.</p>
+                        <p class="productoPrecio">$495.00</p>
+                    </a>
+                    <div class="botones">
+                            <button class="agregar-carrito addTocart" data-id="6">Añadir al Carrito</button>
+                    </div>
+
+                    <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
+
+                </article>
+            
+            </div>
+
+
+            <div class="productos"> <!-- Producto 7 organizados horizontal -->
+                <article class="producto">
+                    <a href="producto7.html">
+                        <figure>
+                            <img src="sources/tabletamazonfire.jpg" alt="Nombre del Producto" class="itemImage">
+                            <figcaption class="nombreProduct">Tableta Amazon Fire HD 8.0” 16GB</figcaption>
+                        </figure>
+                        <p>Desata tu diversión en cualquier lugar con almacenamiento expandible</p>
+                        <p class="productoPrecio">$7,495.00</p>
+                    </a>
+                    <div class="botones">
+                            <button class="agregar-carrito addTocart" data-id="7">Añadir al Carrito</button>
+                    </div>
+                    <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
+                </article>
+            
+            </div>
+
+
+            <div class="productos"> <!-- Producto 8 organizados horizontal -->
+                <article class="producto">
+                    <a href="producto8.html">
+                        <figure>
+                            <img src="sources/cover360.jpg" alt="Nombre del Producto" class="itemImage">
+                            <figcaption class="nombreProduct">Cover 360</figcaption>
+                        </figure>
+                        <p>"Protección completa para tu dispositivo: Cover 360, tu mejor defensa.</p>
+                        <p class="productoPrecio">$895.00</p>
+                    </a>
+                    <div class="botones">
+                            <button class="agregar-carrito addTocart" data-id="8">Añadir al Carrito</button>
+                    </div>
+                    <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
+                </article>
+            
+            </div>
+
+
+
+
+
         </div>
 
+                
 
-        <div class="productos"> <!-- Producto 3 organizados horizontal -->
-            <article class="producto">
-                <a href="producto3.html">
-                    <figure>
-                        <img src="sources/pencilIphone.jpg" alt="Nombre del Producto">
-                        <figcaption>Apple Pencil (1ra generación)</figcaption>
-                    </figure>
-                    <p>Precisión y fluidez en tus trazos, ideal para dibujar y tomar notas en dispositivos iPad.</p>
-                    <p>Precio: RD$8,995.00</p>
-                </a>
-                <div class="botones">
-                    <a href="carrito.html">
-                        <button class="agregar-carrito">Añadir al Carrito</button>
-                    </a>
-                </div>
-
-
-                <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
-
-            </article>
-        
-        </div>
-
-
-
-        <div class="productos"> <!-- Producto 4 organizados horizontal -->
-            <article class="producto">
-                <a href="producto4.html">
-                    <figure>
-                        <img src="sources/cargadorportatil.jpg" alt="Nombre del Producto">
-                        <figcaption>Cargador Magnético Plegable 3 en 1 </figcaption>
-                    </figure>
-                    <p>Dile adiós a esos interminables cables y cargadores individuales</p>
-                    <p>Precio: RD$2,495.00</p>
-                </a>
-                <div class="botones">
-                    <a href="carrito.html">
-                        <button class="agregar-carrito">Añadir al Carrito</button>
-                    </a>
-                </div>
-                <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
-
-            </article>
-        
-        </div>
-
-
-        <div class="productos"> <!-- Producto 5 organizados horizontal -->
-            <article class="producto">
-                <a href="producto5.html">
-                    <figure>
-                        <img src="sources/forro.jpg" alt="Imagen de cover iphone 13">
-                        <figcaption>Cover iPhone 13 AG GLASS</figcaption>
-                    </figure>
-                    <p>Proteja su teléfono de rayones, golpes y otros daños diarios</p>
-                    <p>Precio: RD$995.00</p>
-                </a>
-                <div class="botones">
-                    <a href="carrito.html">
-                        <button class="agregar-carrito">Añadir al Carrito</button>
-                    </a>
-                </div>
-                <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
-
-            </article>
-        
-        </div>
-
-
-
-        <div class="productos"> <!-- Producto 6 organizados horizontal -->
-            <article class="producto">
-                <a href="producto6.html">
-                    <figure>
-                        <img src="sources/cargador_cableiphone.png" alt="Nombre del Producto">
-                        <figcaption>Cable Tipo-C a Lightning</figcaption>
-                    </figure>
-                    <p>Cargar y sincronizar los AirPods,cargar Iphone, un Siri Remote y mucho más.</p>
-                    <p>Precio: $495.00</p>
-                </a>
-                <div class="botones">
-                    <a href="carrito.html">
-                        <button class="agregar-carrito">Añadir al Carrito</button>
-                    </a>
-                </div>
-
-                <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
-
-            </article>
-        
-        </div>
-
-
-        <div class="productos"> <!-- Producto 7 organizados horizontal -->
-            <article class="producto">
-                <a href="producto7.html">
-                    <figure>
-                        <img src="sources/tabletamazonfire.jpg" alt="Nombre del Producto">
-                        <figcaption>Tableta Amazon Fire HD 8.0” 16GB</figcaption>
-                    </figure>
-                    <p>Desata tu diversión en cualquier lugar con almacenamiento expandible</p>
-                    <p>Precio: RD$7,495.00</p>
-                </a>
-                <div class="botones">
-                    <a href="carrito.html">
-                        <button class="agregar-carrito">Añadir al Carrito</button>
-                    </a>
-                </div>
-                <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
-            </article>
-        
-        </div>
-
-
-        <div class="productos"> <!-- Producto 8 organizados horizontal -->
-            <article class="producto">
-                <a href="producto8.html">
-                    <figure>
-                        <img src="sources/cover360.jpg" alt="Nombre del Producto">
-                        <figcaption>Cover 360</figcaption>
-                    </figure>
-                    <p>"Protección completa para tu dispositivo: Cover 360, tu mejor defensa.</p>
-                    <p>Precio: RD$595.00 - RD$895.00</p>
-                </a>
-                <div class="botones">
-                    <a href="carrito.html">
-                        <button class="agregar-carrito">Añadir al Carrito</button>
-                    </a>
-                </div>
-                <!-- <button><a href="carrito.html">Agregar al carrito</a></button> -->
-            </article>
-        
-        </div>
     </main>
 
 
 
-        <br><br><br><br><br><br><br><br>
+    <!-- carrito de compras -->
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+<br><br><br><br>
 <footer class="footer">
 
     <div class="container">
@@ -341,15 +368,21 @@
                     <li><a href="#">Instagram</a></li>
                 </ul>
             </div>
-            <div class="contacto-email">
-                <h3>Enlaces Rápidos</h3>
-                <ul class="list-unstyled">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Acerca de nosotros</a></li>
-                </ul>
-            </div>
+
+            <section id="contactanos">
+                 <div class="contacto-email">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Productos</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Acerca de nosotros</a></li>
+                    </ul>
+                </div>
+            </section>
+           
+
+
         </div>
         <hr>
         <div class="fila">
@@ -366,6 +399,7 @@
 
 
                 
+<script src="java.js"></script>
 
 </body>
 
